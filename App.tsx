@@ -1,15 +1,16 @@
 import React from "react";
 
-import Form from "./src/components/demo/Form";
-import Yup from "./src/components/demo/Yup";
-import LoginForm from "./src/components/demo/LoginForm";
+import DemoOne from "./src/components/demo/One";
+import DemoTwo from "./src/components/demo/Two";
+import DemoThree from "./src/components/demo/Three";
+import DemoFour from "./src/components/demo/Four";
 
 export default function App() {
   return (
     <>
-      <Form></Form>
-      {/* <Yup></Yup> */}
-      <LoginForm></LoginForm>
+      {/* <DemoOne></DemoOne> */}
+      {/* <DemoThree></DemoThree>  */}
+      <DemoFour></DemoFour>
     </>
   );
 }

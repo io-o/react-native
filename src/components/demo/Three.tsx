@@ -15,7 +15,7 @@ const validationSchema = yup.object().shape({
   password: yup.string().label("密码").required().min(8, "密码不少于8位数"),
 });
 
-export default function LoginForm() {
+export default function DemoThree() {
   return (
     <SafeAreaView style={{ marginTop: 90 }}>
       <Formik
@@ -45,7 +45,9 @@ export default function LoginForm() {
                 autoFocus
               />
               {/* 错误提示 */}
-              <Text style={{ color: "red" }}>{formikProps.errors.name}</Text>
+              <Text style={{ color: "red" }}>
+                {formikProps.touched.name && formikProps.errors.name}
+              </Text>
             </View>
             <View style={{ marginHorizontal: 20, marginVertical: 5 }}>
               <Text style={{ marginBottom: 3 }}>密码</Text>
@@ -63,7 +65,7 @@ export default function LoginForm() {
               />
               {/* 错误提示 */}
               <Text style={{ color: "red" }}>
-                {formikProps.touched.password}
+                {formikProps.touched.password && formikProps.errors.password}
               </Text>
             </View>
             {formikProps.isSubmitting ? (
